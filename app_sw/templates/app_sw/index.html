@@ -1,0 +1,35 @@
+{% extends "app_sw/base.html" %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block css_additional %}
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app_sw/css/index.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="star-wars">
+    <div class="text">
+        <div class="title">
+            <h3>nFactorial Incubator'24</h3>
+        </div>
+        
+        <p>Веб-приложение, основанное на вселенной "Star Wars", позволяющее пользователям исследовать персонажей, планеты и космические корабли из франшизы.</p>
+        
+        <div class="task">Задание 1 </div><p>Создание базового веб-макета.</p>
+
+
+        <div class="task">Задание 2</div><p>Разработка страницы каталога планет, позволяющей пользователям исследовать различные планеты, представленные во вселенной "Звездных войн", с информацией об их климате, обитателях и примечательных достопримечательностях.</p>
+
+        <p>Реализация функции поиска позволяет пользователям искать персонажей, планеты и космические корабли по имени или ключевому слову.</p>
+
+        <div class="task">Задание 3</div><p>Используйте SWAPI, либо же любую на ваше усмотрение.</p>
+    </div>
+</section>
+
+{% endblock %}
+

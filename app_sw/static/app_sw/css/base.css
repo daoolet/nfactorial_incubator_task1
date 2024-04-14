@@ -1,0 +1,31 @@
+* {
+  background: black;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+}
+
+.nav {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Star Wars", sans-serif;
+}
+.nav .nav-link-logo {
+  font-size: 70px;
+}
+.nav a {
+  font-size: 30px;
+  color: #f7e028;
+  text-decoration: none;
+  margin: 0 20px 0 20px;
+}
+.nav a :hover:not(.nav-link-logo) {
+  color: #289dcc;
+  transition: 0.5s ease;
+}/*# sourceMappingURL=base.css.map */

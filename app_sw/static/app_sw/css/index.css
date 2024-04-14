@@ -1,0 +1,23 @@
+section {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.task {
+  color: #f7e028;
+}
+
+.text {
+  display: inline-block;
+  width: 900px;
+  height: 300px;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  text-align: justify;
+  transform: perspective(1000px) rotateX(35deg);
+}
+
+.title {
+  color: red;
+}/*# sourceMappingURL=index.css.map */
