@@ -1,0 +1,22 @@
+.planets {
+
+    .nav {
+
+        font-family: 'Press Start 2P', cursive;
+
+        li {
+
+            a {
+                color: white;
+                font-size: 24px;
+            }
+    
+            :hover {
+                color: red;
+                transition: .5s ease;
+            }
+        }
+    }
+
+
+}

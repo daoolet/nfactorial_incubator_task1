@@ -1,0 +1,26 @@
+{% extends "app_sw/base.html" %}
+{% load static %}
+
+
+{% block title %} Planet - {{ data.name }} {% endblock %}
+
+{% block css_additional %}
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app_sw/css/detail.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="detail-info">
+        <ul class="list-group">
+            <li class="text-center">Climate: {{data.climate}}</li>
+            <li class="text-center">Dameter: {{data.diameter}}</li>
+            <li class="text-center">Gravity: {{data.gravity}}</li>
+            <li class="text-center">Population: {{data.population}}</li>
+            <li class="text-center">Terrain: {{data.terrain}}</li>
+        </ul>
+    </div>
+
+{% endblock %}
+

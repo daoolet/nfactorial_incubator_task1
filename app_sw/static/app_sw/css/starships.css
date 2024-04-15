@@ -1,0 +1,12 @@
+.starships {
+  text-align: center;
+}
+.starships .nav {
+  font-family: "Press Start 2P", cursive;
+}
+.starships .nav li {
+  color: white;
+  font-size: 18px;
+  padding-right: 10px;
+  display: inline-block;
+}/*# sourceMappingURL=starships.css.map */

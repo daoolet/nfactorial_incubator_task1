@@ -5,11 +5,20 @@
 {% block title %} Starships {% endblock %}
 
 {% block css_additional %}
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'app_sw/css/starships.css' %}">
 {% endblock %}
 
 
 {% block content %}
-
+<section class="starships">
+    <ul class="nav flex-column justify-content-center">
+        {% for starship in starships %}
+        <li class="nav-item my-2">
+            {{ starship.name }}
+        </li>
+        {% endfor %}
+    </ul>
+</section>
 {% endblock %}
 
