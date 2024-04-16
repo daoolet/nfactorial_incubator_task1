@@ -39,7 +39,7 @@ nFactoiral Incubator 2024, Второй этап
 
 ### Built With
 
-Так как я не знаю ни один JS framework. Решил сделать фронтэнд на Django Templates + Boostrap. К тому же есть небольшей бэк на Django для запросов к API.
+Так как я не знаю ни один JS framework. Решил сделать фронтэнд на Django Templates + Boostrap. К тому же есть небольшой бэкэнд на Django для запросов к API.
 
 * [![Django][djangoproject.com]][Django-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
@@ -48,7 +48,7 @@ nFactoiral Incubator 2024, Второй этап
 <!-- GETTING STARTED -->
 ## Getting Started
 
-На уроках nFactorial Backend'23 я научился пользоваться [poetry] и с тех пор всегда использую его как альтернатива pip. Прошу обратить внимание  для запуска требуется установить [Python](https://www.python.org/).
+На уроках nFactorial Backend'23 я научился пользоваться [poetry] и с тех пор всегда использую его как альтернатива pip. Прошу обратить внимание  для запуска требуется установить [Python](https://www.python.org/) последней версии (3.12).
 
 ### Prerequisites
 
@@ -65,19 +65,37 @@ nFactoiral Incubator 2024, Второй этап
    ```sh
    git clone https://github.com/daoolet/nfactorial_incubator_task1.git
    ```
-2. Включить виртуальное окружение
+
+2. Перейти в каталог
    ```sh
-   poetry shell
+   cd nfactorial_incubator_task1
    ```
-3. Установить зависимости
+
+Внимание! Далее ниже команды работают почему-то только в Git Bash. Если Вы используете Windows, то в PowerShell или CMD будут выходить ошибки. Данный вывод получен опытным путем, запуском проекта на разных терминалах. 
+
+3. Установить зависимости проекта. Poetry создает изолированное виртуальное окружение для проекта, если оно еще не существует. Затем Poetry устанавливает все зависимости из pyproject.toml и poetry.lock в это виртуальное окружение
    ```sh
    poetry install
    ```
-4. Запустить локально сервер
+
+4. Запустите виртуальное окружение
+   ```sh
+   poetry shell
+   ```
+   
+5. Запустить локально сервер
    ```py
    python manage.py runserver
    ```
 
+6. Перейти на адрес
+    ```
+    http://localhost:8000/starwars/
+    ```
+    или
+    ```
+    http://127.0.0.1:8000/starwars/
+    ```
 
 <!-- RESUME -->
 ## Resume
@@ -86,7 +104,9 @@ nFactoiral Incubator 2024, Второй этап
 
 С точки зрения проектирования все GET-запросы обрабатываются в views.py, а результат выводится на шаблоны, к которым применены стили Boostrap. Для более красивого вывода информации использовал оригинальные цвета и шрифт Star Wars.
 
-Одной из проблемой приложения является отправка запросов в реальном времени и не хранение результата в отдельном файле. Тем самым это занимает время, сайт "думает" при переходе на вкладки. Пологаю, эту проблему можно решить с готовой библиотекой swapi-python, где не требуется отправка запросов API.
+Одной из проблем приложения является отправка запросов в реальном времени и не хранение результата в отдельном файле. Тем самым это занимает время, сайт "думает" при переходе на вкладки. Пологаю, эту проблему можно решить с готовой библиотекой swapi-python, где не требуется отправка запросов.
+
+Следующая проблема с которой я столкнулся перед отправкой проекта - это в разных терминалах poetry ведет по разному. Изначально проект писался используя Git Bash, но при тестировании на разных ПК с разными терминалами (power shell, CMD), то возникали предупреждения и ошибки установки зависимостей. При которых проект не запускался, решением было использовать git bash и запускать команды через него.
 
 <!-- CONTACT -->
 ## Contact
@@ -94,17 +114,6 @@ nFactoiral Incubator 2024, Второй этап
 Daulet Khabidullin - [Linkedin] - dauletkhabidullin@gmail.com
 
 Project Link: [GitHub repo](https://github.com/daoolet/nfactorial_incubator_task1.git)
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Оставлю полезные ссылки
-
-* [Best README Template](https://github.com/othneildrew/Best-README-Template?tab=readme-ov-file#readme-top)
-* [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-* []()
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
