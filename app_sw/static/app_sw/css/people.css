@@ -1,16 +1,16 @@
-.starships {
+.people {
   text-align: center;
   font-family: "Press Start 2P", cursive;
 }
-.starships h4 {
+.people h4 {
   color: red;
 }
-.starships .nav {
+.people .nav {
   font-family: "Press Start 2P", cursive;
 }
-.starships .nav li {
+.people .nav li {
   color: white;
   font-size: 18px;
   padding-right: 10px;
   display: inline-block;
-}/*# sourceMappingURL=starships.css.map */
+}/*# sourceMappingURL=people.css.map */
