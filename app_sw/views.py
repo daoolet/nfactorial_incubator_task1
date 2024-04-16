@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import JsonResponse
 
 import requests
-import json
+
 
 def index(request):
     return render(request, "app_sw/index.html")
@@ -32,36 +31,41 @@ def planet_detail(request, id):
         }   
         return render(request, "app_sw/planet_detail.html", context)
 
+
 def get_people(request):
-    url = "https://swapi.dev/api/planets/"
+    url = "https://swapi.dev/api/people/"
     response = requests.get(url)
 
     if response.status_code == 200:
-        data = response.json()
+        data = response.json()["results"]
+        people_count = response.json()["count"]
+
         context = {
-            "people": data["results"],
-        }   
+           "people": data,
+           "people_count": people_count,
+        } 
         return render(request, "app_sw/people.html", context)
 
-def people_detail(request, id):
-    ...
 
 def get_starships(request):
     url = "https://swapi.dev/api/starships/"
     url2 = "https://swapi.dev/api/starships/?page=2"
+    url3 = "https://swapi.dev/api/starships/?page=3"
+    url4 = "https://swapi.dev/api/starships/?page=4"
 
     response = requests.get(url)
     response2 = requests.get(url2)
+    response3 = requests.get(url3)
+    response4 = requests.get(url4)
 
     if response.status_code == 200:
         data = response.json()["results"]
         data2 = response2.json()["results"]
-        data.extend(data2)
+        data3 = response3.json()["results"]
+        data4 = response4.json()["results"]
+        data.extend(data2 + data3 + data4)
 
         context = {
             "starships": data,
         }   
         return render(request, "app_sw/starships.html", context)
-
-def starship_detail(request, id):
-    ...
